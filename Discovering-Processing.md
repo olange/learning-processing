@@ -25,9 +25,10 @@ Published August 2007, MIT Press. 736 pages
 
 * [ControlP5](http://www.sojamo.de/libraries/controlP5/) _Andreas Schlegel: A Graphical
   User Interface (GUI) library for Processing_
+* [oscP5](http://www.sojamo.de/libraries/oscP5/) _Andreas Schlegel: An implementation of the OSC protocol for processing_
 * [Touch OSC](http://hexler.net/software/touchosc) _Modular OSC and MIDI control surface
   for iPhone / iPod Touch / iPad_ Send and receive Open Sound Control and MIDI messages
-  over Wi-Fi and control CoreMIDI compatible software, hardware and mobile apps.
+  over Wi-Fi and control CoreMIDI compatible software, hardware and mobile apps
 * [TuioPad](https://code.google.com/p/tuiopad/) _Open Source TUIO App for iOS based
   on OpenFrameworks_
 
