@@ -1,21 +1,14 @@
 class GridCell {
-  int cellWidth;
-  int cellHeight;
+  float cellWidth;
+  float cellHeight;
 
-  int stripeWidth;
-  int STRIPECOUNT = 10;
-  
-  void onAdd( int cellWidth, int cellHeight) {
+  void onAdd( float cellWidth, float cellHeight) {
     this.cellWidth = cellWidth; 
     this.cellHeight = cellHeight;
-    this.stripeWidth = floor( cellWidth / STRIPECOUNT);
   }
 
   void draw() {
-    int shade = floor( map( millis() % 1000, 0, 1000, 0, 128));  
-    for( int x = 0; x < this.cellWidth; x += stripeWidth) {
-      fill( abs( shade + x - 255));
-      rect( x, 0, this.stripeWidth, this.cellHeight);
-    }
+    fill( map( millis() % 1000, 0, 1000, 0, 255));
+    rect( 0, 0, cellWidth, cellHeight);
   } 
 }
