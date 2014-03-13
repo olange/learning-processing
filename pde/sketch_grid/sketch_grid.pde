@@ -1,19 +1,19 @@
 // import GridLayout;
-// import Component;
+// import GridCell;
 
 GridLayout grid;
 
 void setup() {
   size( 400, 400);
   smooth();
-  grid = new GridLayout( 4, 2);
-  grid.add( new Component());
-  grid.add( new Component());
-  grid.add( new Component());
-  grid.add( new Component());
-  grid.add( new Component());
-  grid.add( new Component());
-  grid.add( new Component());
+  grid = new GridLayout( 5, 3);
+  grid.add( new GridCell());
+  grid.add( new GridCell());
+  grid.add( new GridCell());
+  grid.add( new GridCell());
+  grid.add( new GridCell());
+  grid.add( new GridCell());
+  grid.add( new GridCell());
 }
 
 void draw() {

@@ -1,7 +1,7 @@
-// import Component;
+// import GridCell;
 
 class GridLayout {
-  Component[] components;
+  GridCell[] cells;
   int nx, ny;
   int count = -1;
   int cellWidth, cellHeight;
@@ -17,7 +17,7 @@ class GridLayout {
     nx = pnx;
     ny = pny;
 
-    components = new Component[ nx * ny];
+    cells = new GridCell[ nx * ny];
     count = 0;
 
     innerWidth = width - xMARGIN * 2;
@@ -28,13 +28,10 @@ class GridLayout {
 
     xStep = cellWidth + xPADDING;
     yStep = cellHeight + yPADDING; 
-    
-    println( "w:", width, "nx:", nx, "xM:", xMARGIN, "xP:", xPADDING, "iW:", innerWidth, "cW:", cellWidth);
-    println( "h:", height, "ny:", ny, "yM:", yMARGIN, "yP:", yPADDING, "iH:", innerHeight, "cH:", cellHeight);
   }
 
-  void add( Component c) {
-    components[ count] = c;
+  void add( GridCell c) {
+    cells[ count] = c;
     count += 1;
     c.onAdd( cellWidth, cellHeight);
   }
@@ -44,7 +41,7 @@ class GridLayout {
     translate( xMARGIN, yMARGIN);
     int i = 0;
     while( i < count) {
-      components[ i++].draw();
+      cells[ i++].draw();
       if( i % nx != 0) { translate( xStep, 0); }
       else { translate( -innerWidth + cellWidth, yStep); }
     }
