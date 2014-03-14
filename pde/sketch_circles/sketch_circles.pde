@@ -16,8 +16,7 @@ void draw() {
   x = sin( m * speed);
   y = cos( m * speed * 4);
   fill( noisy_red());
-  ellipse( width/2 * (0.8 + x), height/2 * (0.8 + y),
-           60+ map( mouseX, 60 * , 60);
+  ellipse( width/2 * (0.8 + x), height/2 * (0.8 + y), 60, 60);
 }
 
 
