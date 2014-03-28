@@ -6,7 +6,7 @@
 
 ### 28.03.2014
 
-* Lecture chap. «Development 1: sketching techniques» (p. 145) du livre [Processing](Discovering-Processing.md#books) de Casey Reas et Ben Fry
+* Lecture chap. «Development 1: Sketching, Techniques» (p. 145) du livre [Processing](Discovering-Processing.md#books) de Casey Reas et Ben Fry
 * [Chargement et affichage image JPEG](pde/sketch_images/sketch_images.pde)
 * Application d'une [image comme texture](pde/sketch_shapes_3d/sketch_shapes_3d.pde) sur une forme 3D
 * Application d'une [video comme texture](pde/sketch_textures/sketch_textures.pde) d'une forme 3D
