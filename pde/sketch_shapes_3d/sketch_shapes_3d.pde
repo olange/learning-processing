@@ -1,6 +1,19 @@
 float hrx = 0.0, hry = 0.0;
-PShape arrow, rect, house;
+PShape arrow, rect, house, tbox;
 PImage img;
+
+PShape createTexturedBox( PImage img) {
+  PShape s = createShape();
+  s.beginShape();
+  s.textureMode( NORMAL);
+  s.texture( img);
+  s.vertex( 10, 20, 0, 0);
+  s.vertex( 80, 5, 1, 0);
+  s.vertex( 95, 90, 1, 1);
+  s.vertex( 40, 95, 0, 1);
+  s.endShape();
+  return s;
+}
 
 PShape createArrowShape() {
   PShape s = createShape();
@@ -8,7 +21,7 @@ PShape createArrowShape() {
   s.fill( palette( -1));
   s.stroke( palette( 1));
   s.strokeWeight( 4);
-  s.vertex(   0,   0);
+  s.vertex(   0, 0);
   s.vertex( 100, 100);
   s.vertex(   0, 200);
   s.endShape( CLOSE);
@@ -29,19 +42,19 @@ PShape createHouse( float W, float H, float P) {
   float RAX = W / 2;   // Roof apex X coord
   float DH = H * 0.5;  // Door height 
   float DW = H * 0.2;  // Door width
-  
+
   PShape s = createShape();
-  
+
   s.beginShape();
   s.fill( 127);
   // s.texture( img);
-  
+
   s.stroke( palette( 3));
   s.strokeWeight( 1.0);
 
   // Face avant
   s.vertex(   0, RH, 0, 0, 0);
-  s.vertex( RAX,  0, 0, 0, 0);
+  s.vertex( RAX, 0, 0, 0, 0);
   s.vertex(   W, RH, 0, 0, 0);
 
   s.vertex( 0, RH, 0, 0, 0);
@@ -51,14 +64,14 @@ PShape createHouse( float W, float H, float P) {
 
   // Face arrière
   s.vertex(   0, RH, P, 0, 0);
-  s.vertex( RAX,  0, P, 0, 0);
+  s.vertex( RAX, 0, P, 0, 0);
   s.vertex(   W, RH, P, 0, 0);
 
   s.vertex( 0, RH, P, 0, 0);
   s.vertex( 0, TH, P, 0, 0);
   s.vertex( W, TH, P, 0, 0);
   s.vertex( W, RH, P, 0, 0);
-  
+
   // Mur latéral gauche
   s.vertex( 0, RH, 0, 0, 0);
   s.vertex( 0, RH, P, 0, 0);
@@ -75,25 +88,25 @@ PShape createHouse( float W, float H, float P) {
 
   s.stroke( palette( 2));
   s.strokeWeight( 2.0);
-  
+
   // Pan gauche du toit
   s.vertex(   0, RH, 0, 0, 0);
   s.vertex(   0, RH, P, 0, 0);
-  s.vertex( RAX,  0, P, 0, 0);
-  s.vertex( RAX,  0, 0, 0, 0);
+  s.vertex( RAX, 0, P, 0, 0);
+  s.vertex( RAX, 0, 0, 0, 0);
   s.vertex(   0, RH, 0, 0, 0);
-  
+
   // Pan droit du toit
   s.vertex(   W, RH, 0, 0, 0);
   s.vertex(   W, RH, P, 0, 0);
-  s.vertex( RAX,  0, P, 0, 0);
-  s.vertex( RAX,  0, 0, 0, 0);
+  s.vertex( RAX, 0, P, 0, 0);
+  s.vertex( RAX, 0, 0, 0, 0);
   s.vertex(   W, RH, 0, 0, 0);
-  
+
   // Porte entrée
   s.beginContour();
   s.vertex( RAX, TH-DH, 0, 0, 0);
-  s.vertex( RAX,    TH, 0, 0, 0);
+  s.vertex( RAX, TH, 0, 0, 0);
   s.vertex( RAX+DW, TH, 0, 0, 0);
   s.vertex( RAX+DW, TH-DH, 0, 0, 0);
   s.vertex( RAX, TH-DH, 0, 0, 0);
@@ -105,12 +118,12 @@ PShape createHouse( float W, float H, float P) {
 
 void drawBox() {
   pushMatrix();
-  translate(130, height/2, 0);
-  rotateY(1.25);
-  rotateX(-0.4);
+  translate( 130, height/2, 0);
+  rotateY( 1.25);
+  rotateX( -0.4);
   stroke( palette( 3));
   fill( palette( -1));
-  box(100);
+  box( 100);
   popMatrix();
 }
 
@@ -123,29 +136,15 @@ void drawSphere() {
   popMatrix();
 }
 
-void setup() {
-  size( 600, 600, P3D); 
-  ortho(); 
-  img = loadImage( "maddalena.jpg");
-
-  strokeCap( ROUND); // SQUARE, PROJECT, ROUND
-  strokeJoin( MITER);  // MITER, BEVEL, ROUND
-  
-  arrow = createArrowShape();
-  rect = createRectShape();
-  house = createHouse( 100, 100, -160);
+void drawTexturedBox() {
+  pushMatrix();
+  rotateY( frameCount*PI/120.0);
+  rotateZ( frameCount*PI/180.0);
+  shape( tbox);
+  popMatrix();
 }
 
-void draw() {
-  background( 128);
-  
-  if( mousePressed)  lights();
-
-  drawSphere();
-  drawBox();
-  
-  translate( width/2, height/2, 0);
-  
+void drawArrow() {
   pushMatrix();
   rotateY( frameCount*PI/170.0);
   rotateZ( frameCount*PI/150.0);
@@ -153,21 +152,59 @@ void draw() {
   translate( 0, 0, -100.0);
   shape( arrow);
   popMatrix();    
+}
 
+void drawHouse() {
   pushMatrix();
   rotateX( frameCount*PI/270.0);
   rotateY( frameCount*PI/180.0);
   rotateZ( frameCount*PI/90.0);
   shape( house);  
-  popMatrix();    
+  popMatrix();
+}
+
+void setup() {
+  size( 600, 600, P3D); 
+  ortho(); 
+  img = loadImage( "maddalena.jpg");
+
+  strokeCap( ROUND); // SQUARE, PROJECT, ROUND
+  strokeJoin( MITER);  // MITER, BEVEL, ROUND
+
+  tbox = createTexturedBox( img);
+  arrow = createArrowShape();
+  rect = createRectShape();
+  house = createHouse( 100, 100, -160);
+}
+
+void draw() {
+  background( 128);
+
+  if ( mousePressed)  lights();
+
+  drawSphere();
+  drawBox();
+
+  translate( width/4, height/4, 0);
+  drawTexturedBox();
+
+  translate( width/4, height/4, 0);
+  drawArrow();
+  drawHouse();
 }
 
 color palette( int pos) {
   switch( pos) {
-    case 0:  return 0x80CCFFAA;  // GREEN PEPPERONI with alpha 128
-    case 1:  return 0x80FFCCFF;  // LIGHT PINK with alpha 128
-    case 2:  return 0x80CC0000;  // RED with alpha 128
-    case 3:  return 0xFF006699;  // PETROL BLUE with alpha 255  
-    default: return 0x40FFFFFF;  // WHITE with alpha 64  
+  case 0:  
+    return 0x80CCFFAA;  // GREEN PEPPERONI with alpha 128
+  case 1:  
+    return 0x80FFCCFF;  // LIGHT PINK with alpha 128
+  case 2:  
+    return 0x80CC0000;  // RED with alpha 128
+  case 3:  
+    return 0xFF006699;  // PETROL BLUE with alpha 255  
+  default: 
+    return 0x40FFFFFF;  // WHITE with alpha 64
   }
 }
+
