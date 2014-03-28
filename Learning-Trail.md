@@ -4,6 +4,12 @@
 
  * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
+### 28.03.2014
+
+* [Chargement et affichage image JPEG](https://github.com/olange/learning-processing/tree/master/pde/sketch_images)
+* Application d'une [image comme texture](https://github.com/olange/learning-processing/blob/master/pde/sketch_shapes_3d/sketch_shapes_3d.pde) sur une forme 3D
+* Application d'une [video comme texture](https://github.com/olange/learning-processing/tree/master/pde/sketch_textures) d'une forme 3D
+
 ### 27.03.2014
 
 * Session Gōng-fu I/O en solo
