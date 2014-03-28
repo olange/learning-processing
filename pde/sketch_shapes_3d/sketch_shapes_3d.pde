@@ -8,9 +8,9 @@ PShape createTexturedBox( PImage img) {
   s.textureMode( NORMAL);
   s.texture( img);
   s.vertex( 10, 20, 0, 0);
-  s.vertex( 80, 5, 1, 0);
-  s.vertex( 95, 90, 1, 1);
-  s.vertex( 40, 95, 0, 1);
+  s.vertex( 120, 5, 1, 0);
+  s.vertex( 135, 130, 1, 1);
+  s.vertex( 40, 135, 0, 1);
   s.endShape();
   return s;
 }
