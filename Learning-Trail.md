@@ -4,6 +4,21 @@
 
  * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
+### 10.04.2014
+
+* Session Gōng-fu I/O avec Enrique
+  * suite réalisation [triangle de production](https://github.com/gongfuio/Girafe/tree/master/sketch_triangle_production) en 3D
+  * et gribouillage à la table noire, dont Enrique a fait une [vidéo ‹timelapse›](https://vimeo.com/91696987)
+
+### 07-09.04.2014
+
+* Etude chap. 5 «Physics libraries» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
+
+### 03.04.2014
+
+* Session Gōng-fu I/O avec Enrique
+  * Réalisation [triangle de production](https://github.com/gongfuio/Girafe/tree/master/sketch_triangle_production) en 3D
+
 ### 28.03.2014
 
 * Lecture chap. «Development 1: Sketching, Techniques» (p. 145) du livre [Processing](Discovering-Processing.md#books) de Casey Reas et Ben Fry
