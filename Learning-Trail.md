@@ -11,6 +11,11 @@
   * suite réalisation [triangle de production](https://github.com/gongfuio/Girafe/tree/master/sketch_triangle_production) en 3D ([aperçu en 9s. de l'animation](https://vimeo.com/92920664) sur Vimeo)
   * projection et gribouillage sur la table noire, dont Enrique a fait une [nouvelle vidéo ‹timelapse›](https://vimeo.com/92920851)
 
+### 15.04.2014
+
+* Conversion dessins vectoriels InkPad en fichiers SVG qui peuvent être affichés par Processing
+* Publication des dessins dans [repository «shapes»](http://github.com/olange/shapes) sur GitHub
+
 ### 10.04.2014
 
 * Session Gōng-fu I/O avec Enrique
