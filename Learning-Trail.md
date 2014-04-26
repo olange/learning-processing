@@ -4,6 +4,10 @@
 
  * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
+### 26.04.2014
+
+* Etude chap. 1 «Vectors» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
+
 ### 24.04.2014
 
 * Suite étude chap. 5 «Physics libraries» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
