@@ -7,6 +7,7 @@
 ### 26.04.2014
 
 * Etude chap. 1 «Vectors» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
+* Réalisation composant _Cluster of nodes_
 
 ### 24.04.2014
 
