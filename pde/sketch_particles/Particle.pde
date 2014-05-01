@@ -19,6 +19,7 @@ class Particle extends VerletParticle {
   void displaySphere() {
     pushMatrix();
     stroke( 0);
+    strokeWeight( 1);
     fill( 64, 64, 192, 64);
     translate( x, y, z);
     sphere( 40);
@@ -27,8 +28,9 @@ class Particle extends VerletParticle {
 
   void displayShadow() {
     pushMatrix();
-    stroke( 32, 128);
-    fill( 192, 192, 192, 128);
+    stroke( 128);
+    strokeWeight( 1);
+    fill( 192, 128);
     translate( shadow.x, shadow.y, shadow.z);
     
     beginShape();
