@@ -7,7 +7,7 @@ VerletPhysics physics;
 Particle p0, p1, p2, p3;
 
 void setup() {
-  size( displayWidth/2, displayHeight/3*2, P3D);
+  size( displayWidth/2, displayHeight/5*4, P3D);
   sphereDetail( 15);
 
   physics = new VerletPhysics();
@@ -24,9 +24,9 @@ void setup() {
   physics.addParticle( p2);
   physics.addParticle( p3);
 
-  physics.addSpring( new VerletSpring( p0, p1, 250, 0.00001));
-  physics.addSpring( new VerletSpring( p0, p2, 150, 0.00001));
-  physics.addSpring( new VerletSpring( p0, p3, 100, 0.00001));
+  physics.addSpring( new VerletSpring( p0, p1, 250, 0.0001));
+  physics.addSpring( new VerletSpring( p0, p2, 150, 0.0001));
+  physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
 }
 
 void draw() {
@@ -43,4 +43,10 @@ void draw() {
   p3.display();
 }
 
-
+void mousePressed() {
+  p0.lock();
+  p0.x = mouseX;
+  p0.z = mouseY;
+  p0.y = 0;
+  p0.unlock();
+}
