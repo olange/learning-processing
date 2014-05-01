@@ -4,6 +4,23 @@
 
  * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
+### 26.04.2014
+
+* Etude chap. 1 «Vectors» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
+* Réalisation composant _Cluster of nodes_
+
+### 24.04.2014
+
+* Suite étude chap. 5 «Physics libraries» du livre [Nature of code](http://natureofcode.com/book/chapter-5-physics-libraries/) de Daniel Shiffman
+* Session Gōng-fu I/O avec Enrique
+  * suite réalisation [triangle de production](https://github.com/gongfuio/Girafe/tree/master/sketch_triangle_production) en 3D ([aperçu en 9s. de l'animation](https://vimeo.com/92920664) sur Vimeo)
+  * projection et gribouillage sur la table noire, dont Enrique a fait une [nouvelle vidéo ‹timelapse›](https://vimeo.com/92920851)
+
+### 15.04.2014
+
+* Conversion dessins vectoriels InkPad en fichiers SVG qui peuvent être affichés par Processing
+* Publication des dessins dans [repository «shapes»](http://github.com/olange/shapes) sur GitHub
+
 ### 10.04.2014
 
 * Session Gōng-fu I/O avec Enrique
