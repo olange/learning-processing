@@ -5,7 +5,7 @@ import toxi.geom.*;
 // Reference to physics world
 VerletPhysics physics;
 Particle p0, p1, p2, p3;
-Arrow axisX, axisY, axisZ;
+Axis axisX, axisY, axisZ;
 PFont baseFont;
 
 void setup() {
@@ -25,7 +25,7 @@ void setup() {
   p1 = new Particle( new Vec3D( 0, 0, 300));
   p2 = new Particle( new Vec3D( 0, -300, 0));
   p3 = new Particle( new Vec3D( 300, 0, 0));
-  
+
   physics.addParticle( p0);
   physics.addParticle( p1);
   physics.addParticle( p2);
@@ -35,9 +35,9 @@ void setup() {
   physics.addSpring( new VerletSpring( p0, p2, 150, 0.0001));
   physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
 
-  axisX = new Arrow( new Vec3D( 250, 0, 0), "x");
-  axisY = new Arrow( new Vec3D( 0, -250, 0), "-y");
-  axisZ = new Arrow( new Vec3D( 0, 0, 250), "z");
+  axisX = new Axis( new Vec3D( 250, 0, 0), "x");
+  axisY = new Axis( new Vec3D( 0, -250, 0), "-y");
+  axisZ = new Axis( new Vec3D( 0, 0, 250), "z");
 }
 
 void draw() {
