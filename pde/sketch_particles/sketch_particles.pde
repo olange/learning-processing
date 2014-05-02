@@ -35,9 +35,9 @@ void setup() {
   physics.addSpring( new VerletSpring( p0, p2, 150, 0.0001));
   physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
 
-  axisX = new Arrow( new Vec3D( 300, 0, 0), "X");
-  axisY = new Arrow( new Vec3D( 0, 300, 0), "Y");
-  axisZ = new Arrow( new Vec3D( 0, 0, 300), "Z");
+  axisX = new Arrow( new Vec3D( 250, 0, 0), "x");
+  axisY = new Arrow( new Vec3D( 0, -250, 0), "-y");
+  axisZ = new Arrow( new Vec3D( 0, 0, 250), "z");
 }
 
 void draw() {
@@ -45,9 +45,8 @@ void draw() {
   background( 192);
 
   translate( width/2, height/2, 0);
-  rotateX( -PI/6);
-  rotateY( -PI/9);
-  // rotateZ( PI/9);
+  rotateX( -PI/9);
+  rotateY( -PI/6);
 
   axisX.display();
   axisY.display();

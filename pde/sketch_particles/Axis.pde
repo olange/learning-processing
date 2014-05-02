@@ -20,7 +20,10 @@ class Arrow {
     fill( 128, 128);
     stroke( 128, 128);
     strokeWeight( 1);
-    rotate( HALF_PI, h.x, -h.y, h.z);
+    // rotate( HALF_PI, h.x, h.y, h.z);
+    rotateZ( h.headingXY());
+    rotateY( -h.headingXZ());
+    rotateX( h.headingYZ());
     line( 0, 0, 0, len, 0, 0);
     line( len, 0, 0, len-size, +size/2, 0);
     line( len, 0, 0, len-size, -size/2, 0);
