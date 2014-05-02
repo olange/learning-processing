@@ -22,10 +22,10 @@ class Arrow {
     stroke( 128, 128);
     strokeWeight( 1);
 
+    translate( start.x, start.y, start.z);
     rotateZ(  heading.headingXY());
     rotateY( -heading.headingXZ());
     rotateX(  heading.headingYZ());
-    translate( start.x, start.y, start.z);
 
     line( 0, 0, 0, len, 0, 0);
     line( len, 0, 0, len-size, +size/2, 0);
