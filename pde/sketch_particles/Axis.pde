@@ -10,15 +10,17 @@ class Arrow {
     h = heading;
     len = max( MIN_ARROW_LEN, h.magnitude());
     size = max( MIN_ARROW_SIZE, len/75);
+    legend = l
   }
 
   void display() {
     pushMatrix();  
     stroke( 128);
     strokeWeight( 1);
-    rotateX( h.headingYZ());
-    rotateY( h.headingXZ());
-    rotateZ( h.headingXY());
+    rotate( HALF_PI, h.x, -h.y, h.z);
+    // rotateX( h.headingYZ());
+    // rotateY( h.headingXZ());
+    // rotateZ( h.headingXY());
     line( 0, 0, 0, len, 0, 0);
     line( len, 0, 0, len-size, +size/2, 0);
     line( len, 0, 0, len-size, -size/2, 0);

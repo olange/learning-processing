@@ -2,7 +2,20 @@
 
 ### Pistes
 
- * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
+* ProcessingjS + embed on iPad
+* P5 Leap Motion
+* Camera
+* Lightning
+* Spline in 3D (toxi.geom)
+* Colors
+* [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
+
+### 01-02.05.2014
+
+* Ré-étude [tutoriel P3D](http://www.processing.org/tutorials/p3d/) de Daniel Shiffman sur site Processing
+* Réalisation animation [Nodes with springs](https://github.com/olange/learning-processing/tree/master/pde/sketch_particles) avec toxilibs VerletPhysics en 3D
+* Session Gōng-fu I/O en solo
+  * réalisation système axes pour animation _Nodes with springs_
 
 ### 26.04.2014
 

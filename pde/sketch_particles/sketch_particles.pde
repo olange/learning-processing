@@ -11,9 +11,10 @@ void setup() {
   size( displayWidth/2, displayHeight/5*4, P3D);
   sphereDetail( 15);
   smooth();
+  lights();
 
   physics = new VerletPhysics();
-  physics.setWorldBounds( new AABB( 500.0));
+  physics.setWorldBounds( new AABB( 400.0));
   // physics.addBehavior( new GravityBehavior( new Vec3D( 0, 0.005, 0)));
   
   p0 = new Particle( new Vec3D( 0, 0, 0));
@@ -30,9 +31,9 @@ void setup() {
   physics.addSpring( new VerletSpring( p0, p2, 150, 0.0001));
   physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
   
-  axisX = new Arrow( new Vec3D( 350, 0, 0));
-  axisY = new Arrow( new Vec3D( 0, 350, 0));
-  axisZ = new Arrow( new Vec3D( 0, 0, 350));
+  axisX = new Arrow( new Vec3D( 300, 0, 0));
+  axisY = new Arrow( new Vec3D( 0, 300, 0));
+  axisZ = new Arrow( new Vec3D( 0, 0, 300));
 }
 
 void draw() {
@@ -40,9 +41,9 @@ void draw() {
   background( 192);
 
   translate( width/2, height/2, 0);
-  rotateX( -PI/9);
+  rotateX( -PI/6);
   rotateY( -PI/9);
-  rotateZ( PI/9);
+  // rotateZ( PI/9);
 
   axisX.display();
   axisY.display();
