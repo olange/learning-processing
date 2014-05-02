@@ -6,17 +6,21 @@ import toxi.geom.*;
 VerletPhysics physics;
 Particle p0, p1, p2, p3;
 Arrow axisX, axisY, axisZ;
+PFont baseFont;
 
 void setup() {
   size( displayWidth/2, displayHeight/5*4, P3D);
   sphereDetail( 15);
   smooth();
   lights();
+  
+  baseFont = loadFont( "data/SourceSansPro-Semibold-32.vlw");
+  textFont( baseFont); 
 
   physics = new VerletPhysics();
   physics.setWorldBounds( new AABB( 400.0));
   // physics.addBehavior( new GravityBehavior( new Vec3D( 0, 0.005, 0)));
-  
+
   p0 = new Particle( new Vec3D( 0, 0, 0));
   p1 = new Particle( new Vec3D( 0, 0, 300));
   p2 = new Particle( new Vec3D( 0, -300, 0));
@@ -30,10 +34,10 @@ void setup() {
   physics.addSpring( new VerletSpring( p0, p1, 250, 0.0001));
   physics.addSpring( new VerletSpring( p0, p2, 150, 0.0001));
   physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
-  
-  axisX = new Arrow( new Vec3D( 300, 0, 0));
-  axisY = new Arrow( new Vec3D( 0, 300, 0));
-  axisZ = new Arrow( new Vec3D( 0, 0, 300));
+
+  axisX = new Arrow( new Vec3D( 300, 0, 0), "X");
+  axisY = new Arrow( new Vec3D( 0, 300, 0), "Y");
+  axisZ = new Arrow( new Vec3D( 0, 0, 300), "Z");
 }
 
 void draw() {

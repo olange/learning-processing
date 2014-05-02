@@ -5,26 +5,36 @@ class Arrow {
   Vec3D h;
   float len;
   float size;
+  boolean hasLegend;
+  String legend;
 
-  Arrow( Vec3D heading) {
+  Arrow( Vec3D heading, String legend) {
     h = heading;
     len = max( MIN_ARROW_LEN, h.magnitude());
     size = max( MIN_ARROW_SIZE, len/75);
-    legend = l
+    setLegend( legend);
   }
 
   void display() {
     pushMatrix();  
-    stroke( 128);
+    fill( 128, 128);
+    stroke( 128, 128);
     strokeWeight( 1);
     rotate( HALF_PI, h.x, -h.y, h.z);
-    // rotateX( h.headingYZ());
-    // rotateY( h.headingXZ());
-    // rotateZ( h.headingXY());
     line( 0, 0, 0, len, 0, 0);
     line( len, 0, 0, len-size, +size/2, 0);
     line( len, 0, 0, len-size, -size/2, 0);
+    if( hasLegend) {
+      textSize( 24);
+      textAlign( LEFT, CENTER);
+      text( legend, len + 6, 0, 0);
+    }
     popMatrix();
+  }
+
+  void setLegend( String legend) {
+    this.hasLegend = ( legend != null && legend.length() != 0); 
+    this.legend = hasLegend ? legend : "";
   }
 }
 
