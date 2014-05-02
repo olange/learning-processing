@@ -2,15 +2,16 @@ class Arrow {
   float MIN_ARROW_LEN = 100;
   float MIN_ARROW_SIZE = 8;
 
-  Vec3D h;
+  Vec3D start, heading;
   float len;
   float size;
   boolean hasLegend;
   String legend;
 
-  Arrow( Vec3D heading) {
-    h = heading;
-    len = max( MIN_ARROW_LEN, h.magnitude());
+  Arrow( Vec3D from, Vec3D to) {
+    start = from;
+    heading = to.sub( from);
+    len = max( MIN_ARROW_LEN, heading.magnitude());
     size = max( MIN_ARROW_SIZE, len/75);
     hasLegend = false;
   }
@@ -20,13 +21,16 @@ class Arrow {
     fill( 128, 128);
     stroke( 128, 128);
     strokeWeight( 1);
-    // rotate( HALF_PI, h.x, h.y, h.z);
-    rotateZ( h.headingXY());
-    rotateY( -h.headingXZ());
-    rotateX( h.headingYZ());
+
+    rotateZ(  heading.headingXY());
+    rotateY( -heading.headingXZ());
+    rotateX(  heading.headingYZ());
+    translate( start.x, start.y, start.z);
+
     line( 0, 0, 0, len, 0, 0);
     line( len, 0, 0, len-size, +size/2, 0);
     line( len, 0, 0, len-size, -size/2, 0);
+
     if( hasLegend) {
       textSize( 24);
       textAlign( LEFT, CENTER);
