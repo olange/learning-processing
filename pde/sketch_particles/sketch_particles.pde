@@ -13,6 +13,7 @@ void setup() {
   sphereDetail( 15);
   smooth();
   lights();
+  // ortho();
   
   baseFont = loadFont( "data/SourceSansPro-Semibold-32.vlw");
   textFont( baseFont); 
@@ -36,7 +37,7 @@ void setup() {
   physics.addSpring( new VerletSpring( p0, p3, 100, 0.0001));
 
   axisX = new Axis( new Vec3D( 250, 0, 0), "x");
-  axisY = new Axis( new Vec3D( 0, -250, 0), "-y");
+  axisY = new Axis( new Vec3D( 0, 200, 0), "y");
   axisZ = new Axis( new Vec3D( 0, 0, 250), "z");
 }
 
