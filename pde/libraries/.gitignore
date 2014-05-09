@@ -1,1 +1,10 @@
 oscP5/**
+audioutils/**
+colorutils/**
+datautils/**
+simutils/**
+toxiclibs_p5/**
+toxiclibscore/**
+verletphysics/**
+volumeutils/**
+
