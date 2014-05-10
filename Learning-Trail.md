@@ -10,6 +10,12 @@
 * Colors
 * [Using python and k-means to find the dominant colors in images](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
+### 08-09.05.2014
+
+* Ajouté couvercle à la demi-sphère avec David
+* Session Gōng-fu I/O en solo
+  * réalisation demi-sphère en 3D pour projet [Pacman](https://github.com/gongfuio/Pacman)
+
 ### 01-02.05.2014
 
 * Ré-étude [tutoriel P3D](http://www.processing.org/tutorials/p3d/) de Daniel Shiffman sur site Processing
