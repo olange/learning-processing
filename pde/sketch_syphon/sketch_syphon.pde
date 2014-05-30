@@ -9,6 +9,8 @@ void setup() {
   
   // Create syhpon server to send frames out.
   server = new SyphonServer(this, "Processing Syphon");
+  
+  frameRate( 30);
 }
 
 void draw() {
@@ -17,6 +19,7 @@ void draw() {
   canvas.stroke( 255);
   canvas.line( 50, 50, mouseX, mouseY);
   canvas.endDraw();
+  frame.setTitle( "Syphon Server (" + int( frameRate) + " fps)");
 
   image( canvas, 0, 0);
   server.sendImage( canvas);
