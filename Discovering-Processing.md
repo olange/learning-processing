@@ -32,13 +32,18 @@ Published August 2007, MIT Press. 736 pages
 * [TuioPad](https://code.google.com/p/tuiopad/) _Open Source TUIO App for iOS based
   on OpenFrameworks_
 
-## Deployment on mobile
+## Mobile deployment
 
 * [Procoding](http://procoding.audiocommander.de) _exécuter des applications ProcessingJS sur iPad, iPhone, iPod_
 
+## Projections
+
+* [Most Pixels Ever](https://github.com/shiffman/Most-Pixels-Ever-Processing) _spanning Processing sketches across multiple screens_ synchronisation entre eux de plusieurs ordis exécutant Processing, chacun d'eux composant les frames en parallèle
+* [MadMapper](http://www.madmapper.com) _Projection mapping_
+* [Syphon](http://syphon.v002.info) _sharing Processing frames between applications (Mac OS X only)_ MadMapper consomme les sources Syphon
+ 
 ## And beyond
 
-* [MadMapper](http://www.madmapper.com) _Projection mapping_
 * [Vuo](http://vuo.org) _Multimedia Composing_ le successeur de Quartz Composer?
 * [Quartz Composer](http://en.wikipedia.org/wiki/Quartz_Composer)
 * [Derivative TouchDesigner](https://www.derivative.ca) cité par Dimitri
