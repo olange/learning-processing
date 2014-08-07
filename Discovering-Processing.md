@@ -35,7 +35,8 @@ Published August 2007, MIT Press. 736 pages
 ## Mobile deployment
 
 * [Apache Cordova + ProcessingJS](http://antonylees.blogspot.ch/2012/07/apache-cordova-phonegap-processingjs.html)
-* [Procoding](http://procoding.audiocommander.de) _exécuter des applications ProcessingJS sur iPad, iPhone, iPod_
+* [Procoding](http://procoding.audiocommander.de) pour exécuter des applications ProcessingJS sur iPad, iPhone, iPod
+* [WebSocketP5](http://muthesius.github.io/WebSocketP5/websocketP5-0.1.4/) _a WebSocket library for Processing_ pour communiquer entre ProcessingJS et Processing
 
 ## Projections
 
