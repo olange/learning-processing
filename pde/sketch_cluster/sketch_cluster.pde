@@ -4,7 +4,7 @@ Cluster c1, c2;
 PFont fontForLegend;
 
 void setup() {
-  size( 800, 800, P3D);
+  size( displayWidth, displayHeight, P3D);
   smooth();
   
   fontForLegend = loadFont( "AvenirNext-Medium-24.vlw");
