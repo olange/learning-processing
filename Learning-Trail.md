@@ -70,21 +70,21 @@
    * et appli [TouchOSC pour Processing](http://www.thebox.myzen.co.uk/Mac_Apps/Processing.html) de Mike Cook
    * en utilisant le [Simple layout](https://mobile.twitter.com/gongfuio/status/449526276554891264/photo/1)
 
-### 13.03.2014
+### 13.03.2014
 
  * Session Gōng-fu I/O en solo
    * Classes et héritage
    * GridLayout et GridCell
    * Shades et Palette
  
-### 27.02.2014
+### 27.02.2014
 
 * Etude 5 premiers chapitres du livre Processing + suppléments 7-9
 * Session Gōng-fu I/O avec Dimitri Delcourt
   * Utiliser `millis()` comme variable temporelle
   * Oscillateurs avec `sin( millis() * freq)` (ou `cos()`)
 
-### 22.02.2014
+### 22.02.2014
 
 Belle fin de matinée au Café des Sources, à une table ensoleillée, j'ai pris le temps de lire la vue d'ensemble de Processing par Ben Fry. Exploré cet après-midi là (voir également entrée du même jour dans journal _Day One_):
 
