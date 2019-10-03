@@ -1,6 +1,6 @@
 # Discovering Processing
 
-## Books
+## Books
 
 * [Processing: A Programming Handbook for Visual Designers and Artists](http://www.processing.org/books/)
   _Casey Reas and Ben Fry, 2007, MIT Press_
