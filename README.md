@@ -1,7 +1,7 @@
 Learning Processing
 ===================
 
-Discovering and learning Processing – code labs, experiments and useful resources.
+Discovering and learning Processing – books, articles, useful resources, personal notes and own experiments.
 
 * [Discovering Processing](Discovering-Processing.md)
 * [Learning Trail](Learning-Trail.md)
